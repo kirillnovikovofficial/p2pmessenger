@@ -1,0 +1,122 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b14bab0cd59206bbcea442237b24c9c5",
+    "packages": [
+        {
+            "name": "corneltek/getoptionkit",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/c9s/GetOptionKit.git",
+                "reference": "1121ee17f304cd7e2d8d2b818df86b6af5f07485"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/c9s/GetOptionKit/zipball/1121ee17f304cd7e2d8d2b818df86b6af5f07485",
+                "reference": "1121ee17f304cd7e2d8d2b818df86b6af5f07485",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GetOptionKit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yo-An Lin",
+                    "email": "yoanlin93@gmail.com"
+                }
+            ],
+            "description": "Powerful command-line option toolkit",
+            "homepage": "http://github.com/c9s/GetOptionKit",
+            "support": {
+                "issues": "https://github.com/c9s/GetOptionKit/issues",
+                "source": "https://github.com/c9s/GetOptionKit/tree/2.6.1"
+            },
+            "time": "2021-11-22T09:15:28+00:00"
+        },
+        {
+            "name": "lazyjsonmapper/lazyjsonmapper",
+            "version": "v1.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lazyjsonmapper/lazyjsonmapper.git",
+                "reference": "0b047af4b48ba8c44bbcdbe8e1e6a53e2303c1bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lazyjsonmapper/lazyjsonmapper/zipball/0b047af4b48ba8c44bbcdbe8e1e6a53e2303c1bb",
+                "reference": "0b047af4b48ba8c44bbcdbe8e1e6a53e2303c1bb",
+                "shasum": ""
+            },
+            "require": {
+                "corneltek/getoptionkit": "2.*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.7.1",
+                "phpunit/phpunit": "6.*"
+            },
+            "bin": [
+                "bin/lazydoctor"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LazyJsonMapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SteveJobzniak",
+                    "homepage": "https://github.com/SteveJobzniak",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Advanced, intelligent & automatic object-oriented JSON containers for PHP.",
+            "homepage": "https://github.com/SteveJobzniak/LazyJsonMapper",
+            "keywords": [
+                "development",
+                "json"
+            ],
+            "support": {
+                "issues": "https://github.com/lazyjsonmapper/lazyjsonmapper/issues",
+                "source": "https://github.com/lazyjsonmapper/lazyjsonmapper/tree/v1.6.4"
+            },
+            "time": "2019-12-05T22:22:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.0",
+        "ext-openssl": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

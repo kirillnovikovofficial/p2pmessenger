@@ -1,0 +1,22 @@
+{
+    "name": "p2pmessenger/p2pmessenger",
+    "description": "Messenger for blockchain",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "P2pmessenger\\P2pmessenger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KreeK",
+            "email": "kirillnovikovofficial@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "ext-openssl": "*",
+        "lazyjsonmapper/lazyjsonmapper": "^1.6"
+    }
+}
