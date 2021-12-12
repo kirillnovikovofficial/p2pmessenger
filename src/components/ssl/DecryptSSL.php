@@ -3,6 +3,7 @@
 namespace P2pmessenger\P2pmessenger\components\ssl;
 
 use P2pmessenger\P2pmessenger\components\ssl\exceptions\EncryptSSLException;
+use P2pmessenger\P2pmessenger\core\App;
 use P2pmessenger\P2pmessenger\core\helpers\traits\GetterTrait;
 
 /**
@@ -36,6 +37,8 @@ class DecryptSSL
 
     private function run(): void
     {
+        App::getInstance()->getLogger(new LogCategory())->debug('Start decrypt message.', ['encryptData (base64)' => base64_encode($this->encryptSSL->encryptData)]);
+
         $encryptSSL = $this->encryptSSL;
         if (openssl_open(
             $encryptSSL->encryptData,
@@ -48,5 +51,7 @@ class DecryptSSL
         {
             throw new EncryptSSLException('Failed to decrypt message.');
         }
+
+        App::getInstance()->getLogger(new LogCategory())->debug('Message was decrypt.', ['data' => $this->decryptData, 'encryptData (base64)' => base64_encode($this->encryptSSL->encryptData)]);
     }
 }

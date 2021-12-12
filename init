@@ -12,6 +12,19 @@ $app = \P2pmessenger\P2pmessenger\core\App::getInstance(new \P2pmessenger\P2pmes
         'basedir' => __DIR__,
         'folders' => [
             'ssl',
+            'logs',
+        ],
+    ],
+    'logger' => [
+        'basedir' => __DIR__ . '/runtime/logs/',
+        'active' => true,
+        'categories' => [
+            'app',
+            'ssl',
+        ],
+        'handlers' => [
+            \P2pmessenger\P2pmessenger\core\config\Logger::HANDLER_STDOUT,
+            \P2pmessenger\P2pmessenger\core\config\Logger::HANDLER_FILE,
         ],
     ],
 ]));

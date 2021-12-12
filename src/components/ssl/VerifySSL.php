@@ -29,11 +29,16 @@ class VerifySSL
 
     private function run(): void
     {
+        App::getInstance()->getLogger(new LogCategory())->debug('Start encrypt test message.');
         $encrypt = new EncryptSSL($this->publicKey, self::TEST_DATA);
+
+        App::getInstance()->getLogger(new LogCategory())->debug('Start decrypt test message.');
         $decrypt = new DecryptSSL($encrypt, $this->privateKey);
 
         if ($encrypt->originalData != $decrypt) {
             throw new InvalidSSLDataException();
         }
+
+        App::getInstance()->getLogger(new LogCategory())->debug('SSL keys was verified.');
     }
 }

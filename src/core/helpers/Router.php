@@ -2,6 +2,7 @@
 
 namespace P2pmessenger\P2pmessenger\core\helpers;
 
+use P2pmessenger\P2pmessenger\core\App;
 use P2pmessenger\P2pmessenger\core\config\Router as RouterConfig;
 
 final class Router extends Singleton
@@ -42,7 +43,9 @@ final class Router extends Singleton
 
     private function createDir(string $path): void
     {
-        @mkdir('runtime/' . $path);
+        if (@mkdir('runtime/' . $path)) {
+            App::getInstance()->getLogger()->debug('Router folder was create.', ['folder' => $path]);
+        }
     }
 
     public function createRoute(string $path):  string
